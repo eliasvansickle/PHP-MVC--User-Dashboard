@@ -6,13 +6,13 @@ class Main extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->output->enable_profiler();
+		// $this->output->enable_profiler();
 	}
 
 	public function index()
 	{
 		////Load view file here////
-		$this->load->view('home');
+		$this->load->view('edit_user');
 	}
 }
 

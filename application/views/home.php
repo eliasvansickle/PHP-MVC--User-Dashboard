@@ -23,19 +23,21 @@
 		<script type="text/javascript" src="script.js"></script>
 	</head>
 	<body>
-		<nav class="navbar navbar-inverse navbar-">
-		<div class="container-fluid">
-			<div class="navbar navbar-header">
-				<h3>Test App</h3>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar navbar-brand">
+					<p>Test App</p>
+				</div>
+				<ul class='nav navbar-nav navbar-left'>
+					<li class="home_link"><a href="">Home</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="sign_in_link"><a href="">Sign In</a></li>
+				</ul>
 			</div>
-			<ul class="nav navbar-nav navbar-right">
-				<li class="home_link"><a href="">Home</a></li>
-				<li class="sign_in_link"><a href="">Sign In</a></li>
-			</ul>
-		</div>
-	</nav>
+		</nav>
 		<div class="row">
-			<div class="col-xs-4 col-xs-offset-4 col-sm-4 col-sm-offset-4 col-md-5 col-md-offset-4  jumbotron">
+			<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1  jumbotron">
 				<h4>Welcome</h4>
 				<p>Building a userdashboard with CodeIgniter</p>
 				<form action="" method="post">
@@ -43,7 +45,20 @@
 				</form>
 			</div>
 		</div>
-		<div class="row"></div>
+		<div class="row">
+			<div class="col-xs-3 col-xs-offset-1 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1">
+				<h5>Manage Users</h5>
+				<p>lorem</p>
+			</div>
+			<div class="col-xs-3 col-xs-offset-1 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1">
+				<h5>Manage Users</h5>
+				<p>lorem</p>
+			</div>
+			<div class="col-xs-3 col-xs-offset-1 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1">
+				<h5>Manage Users</h5>
+				<p>lorem</p>
+			</div>
+		</div>
 	</body>
 </html>
 

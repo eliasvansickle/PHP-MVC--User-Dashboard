@@ -1,0 +1,17 @@
+div.row {
+	padding: 10px;
+}
+div.edit_info {
+	text-align: center;
+	border: 1px solid black;
+}
+div.edit_password {
+	text-align: center;
+	border: 1px solid black;
+}
+input.update_description {
+	float: right;
+}
+form select {
+	width: 155px;
+}
