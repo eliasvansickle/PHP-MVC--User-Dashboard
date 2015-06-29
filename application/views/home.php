@@ -35,7 +35,7 @@
 		</div>
 	</nav>
 		<div class="row">
-			<div class="col-xs-4 col-sm-offset-4 jumbotron">
+			<div class="col-xs-4 col-xs-offset-4 col-sm-4 col-sm-offset-4 col-md-5 col-md-offset-4  jumbotron">
 				<h4>Welcome</h4>
 				<p>Building a userdashboard with CodeIgniter</p>
 				<form action="" method="post">
