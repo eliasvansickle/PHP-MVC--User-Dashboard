@@ -76,7 +76,7 @@
 			<div class="col-xs-9 col-xs-offset-2 col-sm-9 col-sm-offset-2 col-md-9 col-md-offset-2">
 				<label>
 					<h5><a href="">Mark Guillen</a> wrote</h5>
-					<textarea name="comment" class='form-control' cols="100" rows="2" placeholder='write a comment'>COMMENT EXAMPLE</textarea>
+					<textarea name="posted_comment" class='form-control' cols="100" rows="2">COMMENT EXAMPLE</textarea>
 				</label>
 			</div>
 		</div>

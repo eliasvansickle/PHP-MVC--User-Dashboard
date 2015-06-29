@@ -12,7 +12,7 @@ class Main extends CI_Controller {
 	public function index()
 	{
 		////Load view file here////
-		$this->load->view('edit_user');
+		$this->load->view('show_user');
 	}
 }
 

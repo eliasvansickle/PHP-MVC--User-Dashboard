@@ -39,7 +39,7 @@
 		</nav>
 		<div class="row">
 			<div class="col-xs-4 col-xs-offset-3 col-sm-4 col-sm-offset-3 col-md-4 col-md-offset-3">
-				<h3>Edit Profile</h3>
+				<h3>Edit User</h3>
 			</div>
 			<div class="col-xs-2 col-xs-offset-1 col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1">
 				<form action="" method='post'>
