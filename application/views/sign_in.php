@@ -29,10 +29,10 @@
 					<p>Test App</p>
 				</div>
 				<ul class='nav navbar-nav navbar-left'>
-					<li class="home_link"><a href="">Home</a></li>
+					<li class="home_link"><a href="/">Home</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="sign_in_link"><a href="">Sign In</a></li>
+					<li class="sign_in_link"><a href="/main/sign_in">Sign In</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -51,7 +51,7 @@
 					</div>
 				</form>
 				<div class="row">
-					<a href="#">Don't have an account? Register.</a>
+					<a href="/main/register">Don't have an account? Register.</a>
 				</div>
 			</div>
 		</div>

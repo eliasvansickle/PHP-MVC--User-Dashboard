@@ -29,8 +29,8 @@
 					<p>Test App</p>
 				</div>
 				<ul class='nav navbar-nav navbar-left'>
-					<li class="home_link"><a href="">Dashboard</a></li>
-					<li class="home_link"><a href="">Profile</a></li>
+					<li class="dashboard_link"><a href="/main/admin_dashboard">Dashboard</a></li>
+					<li class="profile_link"><a href="/main/profile">Profile</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li class="sign_in_link"><a href="">Log Off</a></li>

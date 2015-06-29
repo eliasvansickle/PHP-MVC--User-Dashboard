@@ -29,10 +29,10 @@
 					<p>Test App</p>
 				</div>
 				<ul class='nav navbar-nav navbar-left'>
-					<li class="home_link"><a href="">Home</a></li>
+					<li class="home_link"><a href="/">Home</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="sign_in_link"><a href="">Sign In</a></li>
+					<li class="sign_in_link"><a href="/main/sign_in">Sign In</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -40,7 +40,7 @@
 			<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1  jumbotron">
 				<h4>Welcome</h4>
 				<p>Building a userdashboard with CodeIgniter</p>
-				<form action="" method="post">
+				<form action="/main/sign_in" method="post">
 					<input type="submit" value="Start">
 				</form>
 			</div>
