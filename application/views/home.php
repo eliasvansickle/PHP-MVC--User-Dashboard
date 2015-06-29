@@ -23,7 +23,27 @@
 		<script type="text/javascript" src="script.js"></script>
 	</head>
 	<body>
-		
+		<nav class="navbar navbar-inverse navbar-">
+		<div class="container-fluid">
+			<div class="navbar navbar-header">
+				<h3>Test App</h3>
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="home_link"><a href="">Home</a></li>
+				<li class="sign_in_link"><a href="">Sign In</a></li>
+			</ul>
+		</div>
+	</nav>
+		<div class="row">
+			<div class="col-xs-4 col-sm-offset-4 jumbotron">
+				<h4>Welcome</h4>
+				<p>Building a userdashboard with CodeIgniter</p>
+				<form action="" method="post">
+					<input type="submit" value="Start">
+				</form>
+			</div>
+		</div>
+		<div class="row"></div>
 	</body>
 </html>
 
