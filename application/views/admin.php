@@ -21,6 +21,13 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 		<!-- link to custom local jquery -->
 		<script type="text/javascript" src="script.js"></script>
+		<script type='text/javascript'>
+			$(document).ready(function() {
+				$("a.remove").click(function(){
+					alert('Are you sure you want to remove this user?');
+				});
+			});
+		</script>
 	</head>
 	<body>
 		<nav class="navbar navbar-inverse">
@@ -74,7 +81,7 @@
 							<td>".$user['user_level']."</td>";
  ?>
 							<td><a href=<?='/users/edit_user/'.$user['id'].'>' ?>edit</a></td>
-							<td><a href="">remove</a></td>
+							<td><a class='remove' href=<?='/users/remove/'.$user['id'].'>' ?>remove</a></td>
 						</tr>
 <?php  
 					}

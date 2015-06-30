@@ -28,12 +28,26 @@ class Users extends CI_Controller
 		$this->load->view('new_user');
 	}
 	public function create_new_user()
-	{	
-		$post = $this->input->post();
-		$this->user->create_new_user($post);
+	{
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|is_unique[users.email]');
+		$this->form_validation->set_rules('first_name', 'First Name', 'required|trim|alpha');
+		$this->form_validation->set_rules('last_name','Last Name', 'required|trim|alpha');
+		$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]|md5');
+		$this->form_validation->set_rules('passconf', 'Password Confirmation', 'trim|required|matches[password]');
 
-		$this->session->set_flashdata('successful_add', 'User has been successfully added');
-		redirect('/users/add_new_user');
+		if($this->form_validation->run() == FALSE)
+		{
+			$this->session->set_flashdata('create_user_errors', validation_errors());
+			redirect('/users/add_new_user');
+		}
+		else
+		{
+			$post = $this->input->post();
+			$this->user->create_new_user($post);
+			$this->session->set_flashdata('successful_add', 'User has been successfully added');
+			redirect('/users/add_new_user');
+		}
 	}
 	public function show_user($id)
 	{
@@ -55,5 +69,10 @@ class Users extends CI_Controller
 		$this->load->view('edit_profile', array(
 			'user_data' => $user_data
 			));
+	}
+	public function remove($id)
+	{
+		$this->user->remove($id);
+		redirect('/main/admin_dashboard');
 	}
 }
