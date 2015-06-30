@@ -54,15 +54,24 @@
 						<th>user_level</th>
 					</thead>
 					<tbody>
+<?php
+					foreach($users as $user)
+					{ 
+?>
 						<tr>
-							<td>1</td>
+<?php 						echo "
+							<td>".$user['id']."</td>
 							<td>
-								<a href="">Michael Choi</a>
+								<a href=''>".$user['first_name']." ".$user['last_name']."</a>
 							</td>
-							<td>michael@village60606.com</td>
-							<td>dec 24th 2012</td>
-							<td>admin</td>
+							<td>".$user['email']."</td>
+							<td>".$user['created_at']."</td>
+							<td>".$user['user_level']."</td>";
+ ?>
 						</tr>
+<?php  
+					}
+?>
 					</tbody>
 				</table>
 			</div>

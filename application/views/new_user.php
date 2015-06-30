@@ -40,7 +40,9 @@
 		<div class="row">
 			<div class="col-xs-6 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-6 col-md-offset-1">
 				<h4>Add a new user</h4>
-				<form action="" method="post">
+				<?= $this->session->flashdata('create_user_errors'); ?>
+				<?= $this->session->flashdata('successful_add'); ?>
+				<form action="/users/create_new_user" method="post">
 					<div class="row">
 						<input type="email" name='email' placeholder='Email Address'>
 					</div>
@@ -62,7 +64,7 @@
 				</form>
 			</div>
 			<div class="col-xs-3 col-xs-offset-1 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1">
-				<form action="#" method='post'>
+				<form action="/main/admin_dashboard" method='post'>
 					<input type="submit" value='Return to Dashboard'>
 				</form>
 			</div>

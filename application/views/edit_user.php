@@ -42,7 +42,7 @@
 				<h3>Edit User</h3>
 			</div>
 			<div class="col-xs-2 col-xs-offset-1 col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1">
-				<form action="" method='post'>
+				<form action="/main/admin_dashboard" method='post'>
 					<input type="submit" value='Return to Dashboard'>
 				</form>
 			</div>

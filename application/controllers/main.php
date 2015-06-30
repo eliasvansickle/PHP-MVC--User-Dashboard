@@ -24,11 +24,11 @@ class Main extends CI_Controller {
 	}
 	public function dashboard()
 	{
-		$this->load->view('dashboard');
+		redirect('/users/user_dashboard');
 	}
 	public function admin_dashboard()
 	{
-		$this->load->view('admin');	
+		redirect('/users/admin_dashboard');	
 	}
 	public function profile()
 	{

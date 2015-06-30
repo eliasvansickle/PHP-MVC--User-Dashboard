@@ -42,7 +42,7 @@
 				<h4>Manage Users</h4>
 			</div>
 			<div class='col-xs-1 col-sm-1 col-md-1'>
-				<form action="" method='post'>
+				<form action="/users/add_new_user" method='post'>
 					<input type="submit" value='Add new'>
 				</form>
 			</div>
@@ -59,17 +59,26 @@
 						<th>actions</th>
 					</thead>
 					<tbody>
+						<?php
+					foreach($users as $user)
+					{ 
+?>
 						<tr>
-							<td>1</td>
+<?php 						echo "
+							<td>".$user['id']."</td>
 							<td>
-								<a href="">Michael Choi</a>
+								<a href='/users/show_user/".$user['id']."'>".$user['first_name']." ".$user['last_name']."</a>
 							</td>
-							<td>michael@village60606.com</td>
-							<td>dec 24th 2012</td>
-							<td>admin</td>
-							<td>
-								<a href="">edit</a>
-								<a href="">remove</a>
+							<td>".$user['email']."</td>
+							<td>".$user['created_at']."</td>
+							<td>".$user['user_level']."</td>";
+ ?>
+							<td><a href="">edit</a></td>
+							<td><a href="">remove</a></td>
+						</tr>
+<?php  
+					}
+?>
 							</td>
 						</tr>
 					</tbody>
