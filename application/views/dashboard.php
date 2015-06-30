@@ -42,11 +42,6 @@
 			<div class="col-xs-6 col-xs-offset-2 col-sm-6 col-sm-offset-2 col-md-6 col-md-offset-2">
 				<h4>All Users</h4>
 			</div>
-			<div class='col-xs-1 col-sm-1 col-md-1'>
-				<form action="" method='post'>
-					<input type="submit" value='Add new'>
-				</form>
-			</div>
 		</div>
 		<div class="row">
 			<div class="container-fluid table-container">	
