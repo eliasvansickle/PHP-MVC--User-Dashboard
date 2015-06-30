@@ -39,7 +39,9 @@
 		<div class="row">
 			<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1  jumbotron">
 				<h4>Sign In</h4>
-				<form action="" method="post">
+				<?= $this->session->flashdata('login_errors'); ?>
+				<?= $this->session->flashdata('login_fail'); ?>
+				<form action="/reglogs/sign_in" method="post">
 					<div class="row">
 						<input type="email" name='email' placeholder='Email Address'>
 					</div>
@@ -51,7 +53,7 @@
 					</div>
 				</form>
 				<div class="row">
-					<a href="/main/register">Don't have an account? Register.</a>
+					<a href="/main/register">Don't have an account? Click to register.</a>
 				</div>
 			</div>
 		</div>

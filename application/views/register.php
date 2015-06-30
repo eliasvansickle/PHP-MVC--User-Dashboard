@@ -39,7 +39,8 @@
 		<div class="row">
 			<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 jumbotron">
 				<h4>Register</h4>
-				<form action="" method="post">
+				<?= $this->session->flashdata('registration_errors'); ?>
+				<form action="/reglogs/register" method="post">
 					<div class="row">
 						<input type="email" name='email' placeholder='Email Address'>
 					</div>

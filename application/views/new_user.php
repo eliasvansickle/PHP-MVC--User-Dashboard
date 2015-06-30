@@ -33,7 +33,7 @@
 					<li class="profile_link"><a href="/main/profile">Profile</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="sign_in_link"><a href="">Sign In</a></li>
+					<li class="sign_in_link"><a href="/main/sign_in">Sign In</a></li>
 				</ul>
 			</div>
 		</nav>

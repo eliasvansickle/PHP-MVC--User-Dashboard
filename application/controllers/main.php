@@ -12,7 +12,7 @@ class Main extends CI_Controller {
 	public function index()
 	{
 		////Load view file here////
-		$this->load->view('dashboard');
+		$this->load->view('home');
 	}
 	public function sign_in()
 	{
@@ -21,10 +21,6 @@ class Main extends CI_Controller {
 	public function register()
 	{
 		$this->load->view('register');
-	}
-	public function login()
-	{
-		$this->load->view('sign_in');
 	}
 	public function dashboard()
 	{
@@ -37,6 +33,11 @@ class Main extends CI_Controller {
 	public function profile()
 	{
 		$this->load->view('edit_profile');
+	}
+	public function logoff()
+	{
+		$this->session->unset_userdata('session');
+		redirect('/');
 	}
 }
 
