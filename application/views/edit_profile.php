@@ -97,7 +97,7 @@
 					<?= $this->session->flashdata('description_message') ?>
 					<form action="/updates/update_description" class="form-group" method="post">
 						<div class="row">
-							<textarea name="description" class='form-control' cols="30" rows="5"><?= $this->session->userdata('description'); ?></textarea>
+							<textarea name="description" class='form-control' cols="30" rows="5"><?php $session = $this->session->userdata('session');echo $session['description'];?></textarea>
 						</div>
 						<div class="row">
 							<input type="submit" value="Save" class='update_description'>

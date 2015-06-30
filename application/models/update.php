@@ -61,6 +61,8 @@ class Update extends CI_Model {
 		$session_query = "SELECT users.description FROM users WHERE id= ?";
 		$values = $user_data['id'];
 		$new_session_description = $this->db->query($session_query, $values)->row_array();
-		$this->session->set_userdata("description", $new_session_description['description']);
+		$array = $this->session->userdata("session");
+		$array['description'] = $new_session_description['description'];
+		$this->session->set_userdata("session", $array);
 	}
 }
