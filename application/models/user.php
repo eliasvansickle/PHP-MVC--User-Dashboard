@@ -30,8 +30,7 @@ class User extends CI_Model {
 		else
 		{
 			$user_level = 'normal';
-		}
-			
+		}	
 		$query = "INSERT INTO users (email, first_name, last_name, password, user_level, created_at, updated_at) VALUES (?,?,?,?,?,NOW(),NOW())";
 		$values = array(
 			$post['email'], 

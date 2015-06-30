@@ -50,7 +50,7 @@ class Reglogs extends CI_Controller
 				$this->session->set_userdata('session', $user_in_database);
 				$session = $this->session->userdata('session');
 				
-				if($session['user_level'] == 'administrator')
+				if($session['user_level'] == 'admin')
 				{
 					redirect('/main/admin_dashboard');
 				}

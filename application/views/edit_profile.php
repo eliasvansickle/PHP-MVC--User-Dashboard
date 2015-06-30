@@ -46,7 +46,9 @@
 			<div class="col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-3 col-md-3 col-md-offset-3">
 				<div class="edit_info">
 					<h4>Edit Information</h4>
-					<form action="" method="post">
+					<?= $this->session->flashdata('edit_info_errors') ?>
+					<?= $this->session->flashdata('info_message') ?>
+					<form action="/updates/update_information" method="post">
 						<div class="row">
 							<label for="email">Email</label><br>
 							<input type="email" name='email' value='<?= $user_data['email'] ?>'>
@@ -62,13 +64,16 @@
 						<div class="row">
 							<input type="submit" value="Save">
 						</div>
+						<input type="hidden" name='id' value='<?= $user_data['id'] ?>'>
 					</form>
 				</div>
 			</div>
 			<div class="col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1">
 				<div class="edit_password">
 					<h4>Change Password</h4>
-					<form action="" method="post">
+					<?= $this->session->flashdata('edit_password_errors') ?>
+					<?= $this->session->flashdata('password_message') ?>
+					<form action="/updates/update_password" method="post">
 						<div class="row">
 							<label for="password">Password</label><br>
 							<input type="password" name='password'>
@@ -80,6 +85,7 @@
 						<div class="row">
 							<input type="submit" value="Update Password">
 						</div>
+						<input type="hidden" name='id' value='<?= $user_data['id'] ?>'>
 					</form>
 				</div>
 			</div>
@@ -88,13 +94,15 @@
 			<div class="col-xs-7 col-xs-offset-3 col-sm-7 col-sm-offset-3 col-md-7 col-md-offset-3">
 				<div class="edit_description">
 					<h4>Edit Description</h4>
-					<form action="" class="form-group" method="post">
+					<?= $this->session->flashdata('description_message') ?>
+					<form action="/updates/update_description" class="form-group" method="post">
 						<div class="row">
-							<textarea name="description" class='form-control' cols="30" rows="5"><?= $user_data['description'] ?></textarea>
+							<textarea name="description" class='form-control' cols="30" rows="5"><?= $this->session->userdata('description'); ?></textarea>
 						</div>
 						<div class="row">
 							<input type="submit" value="Save" class='update_description'>
 						</div>
+						<input type="hidden" name='id' value='<?= $user_data['id'] ?>'>
 					</form>
 				</div>
 			<div>

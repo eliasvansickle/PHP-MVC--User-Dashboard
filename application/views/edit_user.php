@@ -51,7 +51,9 @@
 			<div class="col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-3 col-md-3 col-md-offset-3">
 				<div class="edit_info">
 					<h4>Edit Information</h4>
-					<form action="" method="post">
+					<?= $this->session->flashdata('edit_info_errors') ?>
+					<?= $this->session->flashdata('info_message') ?>
+					<form action="/updates/edit_information" method="post">
 						<div class="row">
 							<label for="email">Email</label><br>
 							<input type="email" name='email' value='<?= $user_data['email'] ?>'>
@@ -65,14 +67,15 @@
 							<input type="text" name='last_name' value='<?= $user_data['last_name'] ?>'>
 						</div>
 						<div class="row">
-							<input type="submit" value="Save">
-						</div>
-						<div class="row">
 							<label>User Level</label><br>
-							<select>
+							<select name='user_level'>
 								<option value="normal">Normal</option>
 								<option value="admin">Admin</option>
 							</select>
+						</div>
+						<input type="hidden" name='id' value='<?= $user_data['id'] ?>'>
+						<div class="row">
+							<input type="submit" value="Save">
 						</div>
 					</form>
 				</div>
@@ -80,7 +83,9 @@
 			<div class="col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1">
 				<div class="edit_password">
 					<h4>Change Password</h4>
-					<form action="" method="post">
+					<?= $this->session->flashdata('edit_password_errors') ?>
+					<?= $this->session->flashdata('password_message') ?>
+					<form action="/updates/edit_password" method="post">
 						<div class="row">
 							<label for="password">Password</label><br>
 							<input type="password" name='password'>
@@ -92,6 +97,7 @@
 						<div class="row">
 							<input type="submit" value="Update Password">
 						</div>
+							<input type="hidden" name='id' value='<?= $user_data['id'] ?>'>
 					</form>
 				</div>
 			</div>
