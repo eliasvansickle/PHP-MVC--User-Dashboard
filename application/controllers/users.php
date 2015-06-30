@@ -42,4 +42,18 @@ class Users extends CI_Controller
 			'user_data' => $user_data
 			));
 	}
+	public function edit_user($id)
+	{
+		$user_data = $this->user->edit_user($id);
+		$this->load->view('edit_user', array(
+			'user_data' => $user_data
+			));
+	}
+	public function view_profile()
+	{
+		$user_data = $this->session->userdata('session');
+		$this->load->view('edit_profile', array(
+			'user_data' => $user_data
+			));
+	}
 }

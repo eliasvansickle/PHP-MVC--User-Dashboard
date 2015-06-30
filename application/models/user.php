@@ -62,4 +62,14 @@ class User extends CI_Model {
 		$values = $id;
 		return $this->db->query($query, $values)->row_array();
 	}
+	public function edit_user($id)
+	{
+		$query = 'SELECT * FROM users WHERE id = ?';
+		$values = $id;
+		return $this->db->query($query, $values)->row_array();
+	}
+	public function edit_profile()
+	{
+		die('in model');
+	}
 }

@@ -32,7 +32,7 @@ class Main extends CI_Controller {
 	}
 	public function profile()
 	{
-		$this->load->view('edit_profile');
+		redirect('/users/view_profile');
 	}
 	public function logoff()
 	{

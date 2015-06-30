@@ -2,6 +2,7 @@
 
 $route['default_controller'] = "main";
 $route['show_user/(:num)'] = 'users/show_user/$1';
+$route['edit_user/(:num)'] = 'users/edit_user/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 

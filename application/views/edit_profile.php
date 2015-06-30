@@ -49,15 +49,15 @@
 					<form action="" method="post">
 						<div class="row">
 							<label for="email">Email</label><br>
-							<input type="email" name='email'>
+							<input type="email" name='email' value='<?= $user_data['email'] ?>'>
 						</div>
 						<div class="row">
 							<label for="first_name">First Name</label><br>
-							<input type="text" name='first_name'>
+							<input type="text" name='first_name' value='<?= $user_data['first_name'] ?>'>
 						</div>
 						<div class="row">
 							<label for="last_name">Last Name</label><br>
-							<input type="text" name='last_name'>
+							<input type="text" name='last_name' value='<?= $user_data['last_name'] ?>'>
 						</div>
 						<div class="row">
 							<input type="submit" value="Save">
@@ -90,7 +90,7 @@
 					<h4>Edit Description</h4>
 					<form action="" class="form-group" method="post">
 						<div class="row">
-							<textarea name="description" class='form-control' cols="30" rows="5"></textarea>
+							<textarea name="description" class='form-control' cols="30" rows="5"><?= $user_data['description'] ?></textarea>
 						</div>
 						<div class="row">
 							<input type="submit" value="Save" class='update_description'>

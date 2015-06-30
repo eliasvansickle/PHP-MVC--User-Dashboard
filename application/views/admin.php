@@ -73,7 +73,7 @@
 							<td>".$user['created_at']."</td>
 							<td>".$user['user_level']."</td>";
  ?>
-							<td><a href="">edit</a></td>
+							<td><a href=<?='/users/edit_user/'.$user['id'].'>' ?>edit</a></td>
 							<td><a href="">remove</a></td>
 						</tr>
 <?php  
