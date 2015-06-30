@@ -62,7 +62,7 @@
 <?php 						echo "
 							<td>".$user['id']."</td>
 							<td>
-								<a href=''>".$user['first_name']." ".$user['last_name']."</a>
+								<a href='/users/show_user/".$user['id']."'>".$user['first_name']." ".$user['last_name']."</a>
 							</td>
 							<td>".$user['email']."</td>
 							<td>".$user['created_at']."</td>
