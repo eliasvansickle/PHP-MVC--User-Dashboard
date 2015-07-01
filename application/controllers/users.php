@@ -53,9 +53,11 @@ class Users extends CI_Controller
 	{
 		$user_data = $this->user->show_user($id);
 		$messages = $this->wall->show_messages($id);
+		$comments = $this->wall->show_comments($id);
 		$this->load->view('show_user', array(
 			'user_data' => $user_data,
-			'messages' => $messages
+			'messages' => $messages,
+			'comments' => $comments
 			));
 	}
 	public function edit_user($id)

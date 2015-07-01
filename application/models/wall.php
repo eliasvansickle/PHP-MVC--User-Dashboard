@@ -31,7 +31,13 @@ class Wall extends CI_Model {
 	public function show_messages($message_board_id)
 	{
 		$query = "SELECT messages.id, messages.user_id, messages.content, messages.message_board_id, users.first_name, users.last_name, messages.created_at 
-				 FROM messages LEFT JOIN users ON messages.user_id = users.id WHERE message_board_id = ?";
+				 FROM messages LEFT JOIN users ON messages.user_id = users.id WHERE message_board_id = ? ORDER BY messages.created_at DESC";
+		$values = $message_board_id;
+		return $this->db->query($query, $values)->result_array();
+	}
+	public function show_comments($message_board_id)
+	{
+		$query = "SELECT * FROM messages JOIN comments ON messages.id = comments.message_id JOIN users ON comments.user_id = users.id WHERE message_board_id = ?";
 		$values = $message_board_id;
 		return $this->db->query($query, $values)->result_array();
 	}

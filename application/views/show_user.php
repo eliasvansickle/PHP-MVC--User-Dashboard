@@ -80,6 +80,24 @@
 				</label>
 			</div>	
 		</div>
+<?php
+			foreach($comments as $comment)
+			{
+				if($comment['message_id'] == $message['id'])
+				{
+?>
+		<div class="row">
+			<div class="col-xs-9 col-xs-offset-2 col-sm-9 col-sm-offset-2 col-md-9 col-md-offset-2">
+				<label>
+					<h5><a href='<?="/users/show_user/".$comment['user_id'] ?>'><?= $comment['first_name']." ".$comment['last_name'] ?></a> wrote</h5>
+					<textarea name="posted_comment" class='form-control' cols="100" rows="2"><?= $comment['content'] ?></textarea>
+				</label>
+			</div>
+		</div>
+<?php
+				}
+			}
+?>
 		<div class="row">
 			<div class="col-xs-9 col-xs-offset-2 col-sm-9 col-sm-offset-2 col-md-9 col-md-offset-2">
 				<form action="/walls/insert_comment" method='post' class="form-group">
@@ -87,21 +105,14 @@
 						<textarea name="comment" class='form-control' cols="100" rows="2" placeholder='write a comment'></textarea>
 						<input type="submit" class='post_message' value='post'>
 					</label>
-					<input type="hidden" name='id' value='<?=$message['id'] ?>'>	
+					<input type="hidden" name='id' value='<?=$message['id'] ?>'>
+					<input type="hidden" name='message_board_id' value='<?=$user_data['id'] ?>'>	
 				</form>
 			</div>
 		</div>
 <?php
 		}
 ?>
-		<div class="row">
-			<div class="col-xs-9 col-xs-offset-2 col-sm-9 col-sm-offset-2 col-md-9 col-md-offset-2">
-				<label>
-					<h5><a href="">Mark Guillen</a> wrote</h5>
-					<textarea name="posted_comment" class='form-control' cols="100" rows="2">COMMENT EXAMPLE</textarea>
-				</label>
-			</div>
-		</div>
 	</body>
 </html>
 
