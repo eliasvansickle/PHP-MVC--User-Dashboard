@@ -48,15 +48,15 @@
 		<div class="row">
 			<div class="col-xs-3 col-xs-offset-1 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1">
 				<h5>Manage Users</h5>
-				<p>lorem</p>
+				<p>Using this application, yo'll learn how to add, remove, and edit users for the application</p>
 			</div>
 			<div class="col-xs-3 col-xs-offset-1 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1">
-				<h5>Manage Users</h5>
-				<p>lorem</p>
+				<h5>Leave Messages</h5>
+				<p>Users will be able to leave a message to another user using this application</p>
 			</div>
 			<div class="col-xs-3 col-xs-offset-1 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1">
-				<h5>Manage Users</h5>
-				<p>lorem</p>
+				<h5>Edit User Information</h5>
+				<p>Admins will be able to edit another user's information (email address, first name, last name, etc).</p>
 			</div>
 		</div>
 	</body>
