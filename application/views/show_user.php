@@ -82,11 +82,12 @@
 		</div>
 		<div class="row">
 			<div class="col-xs-9 col-xs-offset-2 col-sm-9 col-sm-offset-2 col-md-9 col-md-offset-2">
-				<form action="" method='post' class="form-group">
+				<form action="/walls/insert_comment" method='post' class="form-group">
 					<label>
 						<textarea name="comment" class='form-control' cols="100" rows="2" placeholder='write a comment'></textarea>
 						<input type="submit" class='post_message' value='post'>
-					</label>	
+					</label>
+					<input type="hidden" name='id' value='<?=$message['id'] ?>'>	
 				</form>
 			</div>
 		</div>

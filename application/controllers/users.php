@@ -53,9 +53,6 @@ class Users extends CI_Controller
 	{
 		$user_data = $this->user->show_user($id);
 		$messages = $this->wall->show_messages($id);
-		// var_dump($user_data);
-		// var_dump($messages);
-		// die('working');
 		$this->load->view('show_user', array(
 			'user_data' => $user_data,
 			'messages' => $messages
