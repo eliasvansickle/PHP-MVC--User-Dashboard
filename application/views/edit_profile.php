@@ -29,7 +29,21 @@
 					<p>Test App</p>
 				</div>
 				<ul class='nav navbar-nav navbar-left'>
-					<li class="dashboard_link"><a href="/main/dashboard">Dashboard</a></li>
+					<li class="dashboard_link">
+						<a 
+<?php 
+						$session = $this->session->userdata('session');
+						if($session['user_level'] == 'normal')
+						{
+							echo "href='/main/dashboard'>";
+						}
+						else 
+						{
+							echo "href='/main/admin_dashboard'>";
+						}
+?>
+					Dashboard</a>
+				</li>
 					<li class="profile_link"><a href="/main/profile">Profile</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">

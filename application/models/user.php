@@ -6,7 +6,7 @@ class User extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->output->enable_profiler();
+		// $this->output->enable_profiler();
 	}
 	public function user_dashboard()
 	{
