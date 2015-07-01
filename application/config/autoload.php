@@ -10,6 +10,6 @@ $autoload['config'] = array();
 
 $autoload['language'] = array();
 
-$autoload['model'] = array('reglog', 'user', 'update'); ////Auto load MODEL(S) HERE////
+$autoload['model'] = array('reglog', 'user', 'update', 'wall'); ////Auto load MODEL(S) HERE////
 
 //end of autoload.php
